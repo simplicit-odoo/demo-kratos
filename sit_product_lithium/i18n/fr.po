@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sit_product_lithium
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-21 14:46+0000\n"
+"PO-Revision-Date: 2022-01-21 14:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__name
+msgid "Battery model"
+msgstr "Modèle de pile"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__battery_weight
+msgid "Battery net weight"
+msgstr "Masse nette de la pile"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__brand
+msgid "Brand"
+msgstr "Marque"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__create_uid
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__create_date
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__display_name
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__display_name
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template__display_name
+#: model:ir.model.fields,field_description:sit_product_lithium.field_stock_quant_package__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_product__hazardous_classification
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template__hazardous_classification
+msgid "Hazardous classification"
+msgstr "Classification produits dangereux"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__id
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__id
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template__id
+#: model:ir.model.fields,field_description:sit_product_lithium.field_stock_quant_package__id
+msgid "ID"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery____last_update
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity____last_update
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template____last_update
+#: model:ir.model.fields,field_description:sit_product_lithium.field_stock_quant_package____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__write_uid
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__write_date
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.actions.act_window,name:sit_product_lithium.action_product_lithium_battery_list
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__lithium_battery_id
+#: model:ir.ui.menu,name:sit_product_lithium.menu_product_lithium_battery
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium.view_lithium_battery_form
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium.view_lithium_battery_tree
+msgid "Lithium battery"
+msgstr "Pile lithium"
+
+#. module: sit_product_lithium
+#: model:ir.model,name:sit_product_lithium.model_product_lithium_battery
+msgid "Lithium battery product"
+msgstr "Pile lithium"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__li_qty
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_product__lithium_qty_ids
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template__lithium_qty_ids
+msgid "Lithium qty"
+msgstr "Quantité de lithium"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__note
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium.view_lithium_battery_form
+msgid "Note"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.model,name:sit_product_lithium.model_stock_quant_package
+msgid "Packages"
+msgstr "Colis"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__product_template_id
+msgid "Product"
+msgstr "Article"
+
+#. module: sit_product_lithium
+#: model:ir.model,name:sit_product_lithium.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: sit_product_lithium
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium.product_template_form_view
+msgid "Product lithium"
+msgstr "Article lithium"
+
+#. module: sit_product_lithium
+#: model:ir.model,name:sit_product_lithium.model_product_lithium_quantity
+msgid "Product lithium Quantity"
+msgstr ""
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_quantity__qty
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,help:sit_product_lithium.field_product_product__total_battery_weight
+#: model:ir.model.fields,help:sit_product_lithium.field_product_template__total_battery_weight
+msgid ""
+"This weight will be used to compute total qty on picking and to generate "
+"lithium document"
+msgstr ""
+"C'est cette masse qui sera utilisée pour calculer les quantités totales dans "
+"les transferts et générer les étiquettes lithium"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_product__total_li_qty
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template__total_li_qty
+msgid "Total Li qty"
+msgstr "Quantité totale de Li"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_stock_quant_package__total_lithium_weight
+msgid "Total lithium weight"
+msgstr "Masse de lithium totale"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_product__total_battery_weight
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_template__total_battery_weight
+msgid "Total net weight"
+msgstr "Masse nette totale"
+
+#. module: sit_product_lithium
+#: model:ir.model.fields,field_description:sit_product_lithium.field_product_lithium_battery__type
+msgid "Type"
+msgstr ""

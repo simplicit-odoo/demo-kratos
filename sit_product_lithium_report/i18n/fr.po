@@ -1,0 +1,44 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sit_product_lithium_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-21 14:52+0000\n"
+"PO-Revision-Date: 2022-01-21 14:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sit_product_lithium_report
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium_report.report_lithium_per_package
+msgid "<strong>CNEE:</strong>"
+msgstr ""
+
+#. module: sit_product_lithium_report
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium_report.report_lithium_per_package
+msgid "<strong>SHPR:</strong>"
+msgstr ""
+
+#. module: sit_product_lithium_report
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium_report.report_lithium_per_package
+msgid ""
+"<strong>UN3091<br/>\n"
+"                                LITHIUM METAL BATTERIES<br/>\n"
+"                                CONTAINED IN EQUIPMENT</strong>"
+msgstr ""
+
+#. module: sit_product_lithium_report
+#: model:ir.actions.report,name:sit_product_lithium_report.action_report_lithium_per_package
+msgid "Lithium document"
+msgstr "Etiquettes Lithium"
+
+#. module: sit_product_lithium_report
+#: model_terms:ir.ui.view,arch_db:sit_product_lithium_report.report_lithium_per_package
+msgid "NET QTY:"
+msgstr ""

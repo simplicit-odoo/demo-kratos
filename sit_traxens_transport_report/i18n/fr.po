@@ -1,0 +1,323 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sit_traxens_transport_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-23 10:33+0000\n"
+"PO-Revision-Date: 2022-03-16 10:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid ""
+"<span style=\"font-size: 1.4em;\">Invoice no :</span><br/>\n"
+"                        Date:"
+msgstr ""
+"<span style=\"font-size: 1.4em;\">No Facture :</span><br/>\n"
+"                        Date:"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid ""
+"<span style=\"font-size: 1.4em;\">Delivery Note no :</span><br/>\n"
+"                        Date:"
+msgstr ""
+"<span style=\"font-size: 1.4em;\">No Bon de Livraison :</span><br/>\n"
+"                        Date:"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "<strong style=\"float: left;\"><u>Followed by:</u></strong>"
+msgstr "<strong style=\"float: left;\"><u>Suivi par:</u></strong>"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "<strong><u>Bill to:</u></strong>"
+msgstr "<strong><u>Facturé à:</u></strong>"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "<strong><u>Ship to:</u></strong>"
+msgstr "<strong><u>Expédié à:</u></strong>"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.view_picking_form
+msgid "Add an note that will be printed on the transport document"
+msgstr "Ajoutez une note qui figurera sur le document de transport."
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Arrival depot no"
+msgstr "Dépôt de destination"
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move__ship_pl_reference
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move_line__ship_pl_reference
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking__ship_pl_reference
+msgid "BL N°"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Client no"
+msgstr "N° client"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Client order"
+msgstr "Commande client"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid "Cond pmt:"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Country of origin"
+msgstr "Pays d'origine"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "DN date"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "DN ref"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.view_picking_form
+msgid "Document Reference"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid "Due date:"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "HS Code"
+msgstr "Code HS"
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move__id
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move_line__id
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Incoterms"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Incoterms:"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move__ship_pi_reference
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move_line__ship_pi_reference
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking__ship_pi_reference
+msgid "Invoice N°"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move____last_update
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Line/Rel"
+msgstr "Ligne/Cad"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Logo"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Mode"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Mode:"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid "N/A"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Net weight (kg)"
+msgstr "Poids Net (kg)"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.view_picking_form
+msgid "Note on SHIP PI"
+msgstr "Note pour SHIP PI"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.view_picking_form
+msgid "Note on SHIP PL"
+msgstr "Note pour SHIP PL"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Origin depot no"
+msgstr "Dépôt de départ"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Packing details:"
+msgstr "Détails colisage"
+
+#. module: sit_traxens_transport_report
+#: model:ir.model,name:sit_traxens_transport_report.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Mouvements d'article (Ligne de mouvement de stock)"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Product ref"
+msgstr "Référence Article"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Qty delivered"
+msgstr "Qté livrée"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid "Qty invoiced"
+msgstr "Qté facturée"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Qty ordered"
+msgstr "Qté commandée"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "REMARKS"
+msgstr "COMMENTAIRES"
+
+#. module: sit_traxens_transport_report
+#: model:ir.actions.report,name:sit_traxens_transport_report.action_report_ship_pi_document
+msgid "SHIP PI"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.actions.report,name:sit_traxens_transport_report.action_report_ship_pl_document
+msgid "SHIP PL"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking__ship_pi_note
+msgid "Ship Pi Note"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.model.fields,field_description:sit_traxens_transport_report.field_stock_picking__ship_pl_note
+msgid "Ship Pl Note"
+msgstr ""
+
+#. module: sit_traxens_transport_report
+#: model:ir.model,name:sit_traxens_transport_report.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "TOTAL GROSS WEIGHT (KG)"
+msgstr "POIDS BRUT TOTAL (KG)"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "TOTAL NET WEIGHT (KG)"
+msgstr "POIDS NET TOTAL (KG)"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid "Total VAT excl."
+msgstr "Total HT"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.view_picking_form_tracking
+msgid "Traceability"
+msgstr "Traçabilité"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Tracking:"
+msgstr "Suivi:"
+
+#. module: sit_traxens_transport_report
+#: model:ir.model,name:sit_traxens_transport_report.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "Traxens order"
+msgstr "Commande Traxens"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+msgid "Unit price VAT excl."
+msgstr "Prix unitaire HT"
+
+#. module: sit_traxens_transport_report
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pi_document
+#: model_terms:ir.ui.view,arch_db:sit_traxens_transport_report.report_ship_pl_document
+msgid "www.traxens.com"
+msgstr ""

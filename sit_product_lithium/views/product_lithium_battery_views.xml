@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_lithium_battery_form">
+        <field name="name">product.lithium.battery.form</field>
+        <field name="model">product.lithium.battery</field>
+        <field name="arch" type="xml">
+            <form string="Lithium battery">
+                <sheet>
+                    <group>
+						<group col="3">
+							<field name="name"/>
+							<field name="brand"/>
+							<field name="type"/>
+							<field name="li_qty"/><span>g</span>
+							<field name="battery_weight"/><span>g</span>
+						</group>
+						<field name="note" placeholder="Note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_lithium_battery_tree">
+        <field name="name">product.lithium.battery.tree</field>
+        <field name="model">product.lithium.battery</field>
+        <field name="arch" type="xml">
+            <tree string="Lithium battery">
+				<field name="name"/>
+				<field name="brand"/>
+				<field name="type"/>
+				<field name="li_qty"/>
+				<field name="battery_weight"/>
+				<field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+	<record model="ir.actions.act_window" id="action_product_lithium_battery_list">
+		<field name="name">Lithium battery</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.lithium.battery</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+    <menuitem id="menu_product_lithium_battery"
+        parent="stock.menu_product_in_config_stock" 
+		action="action_product_lithium_battery_list"
+        sequence="60"/>
+    
+    <!-- For data import purposes only : PRODUCT LITHIUM QUANTITY-->
+    <record model="ir.ui.view" id="view_lithium_quantity_tree">
+        <field name="name">product.lithium.quantity.tree</field>
+        <field name="model">product.lithium.quantity</field>
+        <field name="arch" type="xml">
+            <tree string="Product Lithium Quantity" editable="top">
+				<field name="product_template_id"/>
+				<field name="lithium_battery_id"/>
+				<field name="qty"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_product_lithium_quantity_list">
+		<field name="name">Product Lithium Quantity</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">product.lithium.quantity</field>
+		<field name="view_mode">tree</field>
+	</record>
+    <menuitem id="menu_product_lithium_quantity"
+        parent="stock.menu_product_in_config_stock"
+        action="action_product_lithium_quantity_list"
+        groups="base.group_no_one"
+        sequence="61"/>
+    <!-- End data import purpose -->
+
+</odoo>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_ship_pl">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="sit_traxens_transport_report.report_ship_pl_document" t-lang="o.partner_id.lang"/>
+        </t>
+    </template>
+
+    <template id="report_ship_pl_document">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="12"/>
+            <t t-set="data_report_header_spacing" t-value="9"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-call="web.basic_layout">
+                <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)" />
+                <div class="row">
+                    <div class="col-7">
+                        <img t-attf-src="/web/binary/company_logo?company={{ o.company_id.id }}" alt="Logo"/>
+                    </div>
+                    <div class="col-2">
+                        <span style="font-size: 1.4em;">Delivery Note no :</span><br/>
+                        Date: <span t-esc="datetime.datetime.now().strftime('%Y-%m-%d')" t-options="{'widget': 'date'}" class="m-0"/>
+                        <a href="https://www.traxens.com/">www.traxens.com</a>
+                    </div>
+                    <div class="col-3 pr-0">
+                        <span t-esc="o.ship_pl_reference" style="font-size: 1.5em; font-weight: bold"/>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-7 p-0">
+                        <div class="mr-2 px-1" style="border: 1px solid #3db5fd">
+                            <!-- Adresse de départ ou Contact Exportateur si défini-->
+                            <t t-set="departure_address" t-value="o.exporter_partner_id or o.departure_partner_id"/>
+                            <!-- Pour enlever les icones utiliser: "no_marker": True dans "t-options" -->
+                            <span t-esc="departure_address" t-options='{"widget": "contact", "fields": ["address", "name", "phone","mobile"]}'/>
+                            <t t-foreach="departure_address.child_ids" t-as="contact">
+                                <!-- We display each contact as follow: "Name : phone / mobile /email" -->
+                                <div t-if="contact.is_displayed_on_report">
+                                    <span t-field="contact.name"/>
+                                    <span class="mr-2">:</span>
+                                    <span t-field="contact.phone"/>
+                                    <t t-if="contact.phone and contact.mobile"><span class="mx-1">/</span></t>
+                                    <span t-field="contact.mobile"/>
+                                    <t t-if="(contact.mobile or contact.phone) and contact.email"><span class="mx-1">/</span></t>
+                                    <span t-field="contact.email"/>
+                                </div>
+                            </t>
+                            <t t-if="o.exporter_partner_id and o.exporter_note">
+                                <div>
+                                    <span t-field="o.exporter_note"/>
+                                </div>
+                            </t>
+                            <t t-elif="o.departure_partner_id and o.departure_note">
+                                <div>
+                                    <span t-field="o.departure_note"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="col-5 p-0">
+                        <div class="px-1" style="border: 1px solid #3db5fd">
+                            <!-- contact importateur ou - à défaut - adresse de livraison -->
+                            <t t-set="billing_address" t-value="o.importer_partner_id or o.destination_partner_id"/>
+                            <strong><u>Bill to:</u></strong>
+                            <span t-esc="billing_address" t-options='{"widget": "contact", "fields": ["address", "name", "phone","mobile"]}'/>
+                            <t t-foreach="billing_address.child_ids" t-as="contact">
+                                <div t-if="contact.is_displayed_on_report">
+                                    <span t-field="contact.name"/>
+                                    <span class="mr-2">:</span>
+                                    <span t-field="contact.phone"/>
+                                    <t t-if="contact.phone and contact.mobile"><span class="mx-1">/</span></t>
+                                    <span t-field="contact.mobile"/>
+                                    <t t-if="(contact.mobile or contact.phone) and contact.email"><span class="mx-1">/</span></t>
+                                    <span t-field="contact.email"/>
+                                </div>
+                            </t>
+                            <t t-if="o.importer_partner_id and o.importer_note">
+                                <div>
+                                    <span t-field="o.importer_note"/>
+                                </div>
+                            </t>
+                            <t t-elif="o.destination_partner_id and o.destination_note">
+                                <div>
+                                    <span t-field="o.destination_note"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                    <div class="col-7 p-0">
+                        <div t-if="o.vendor_id" class="mr-2 px-1" style="border: 1px solid #3db5fd">
+                            <strong style="float: left;"><u>Followed by:</u></strong>
+                            <div style="margin-left: 150px">
+                                <span t-field="o.vendor_id" t-options='{"widget": "contact", "fields": ["name","email","phone","mobile"]}'/>
+                            </div>
+                        </div>
+                        <div class="mr-2 mt-2" style="border: 1px solid #3db5fd">
+                            <table class="table table-bordered table-sm w-100 m-0 p-0">
+                                <thead style="color: #3db5fd; font-weight: bold;">
+                                    <tr>
+                                        <td>Client no</td>
+                                        <td>Traxens order</td>
+                                        <td>Client order</td>
+                                        <td>Origin depot no</td>
+                                        <td>Arrival depot no</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span t-field="o.customer_id.ref"/></td>
+                                        <t t-if="o.group_id.sale_id">
+                                            <td><span t-field="o.group_id.sale_id"/></td>
+                                            <td><span t-field="o.group_id.sale_id.client_order_ref"/></td>
+                                        </t>
+                                        <t t-else="">
+                                            <td><span t-field="o.group_id"/></td>
+                                            <td><span t-field="o.name"/></td>
+                                        </t>
+                                        <td><span t-field="o.departure_partner_id.property_stock_customer.name"/></td>
+                                        <td><span t-field="o.destination_partner_id.property_stock_customer.name"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mr-2 mt-2" style="border: 1px solid #3db5fd">
+                            <table class="table table-bordered table-sm w-100 m-0 p-0">
+                                <thead style="color: #3db5fd; font-weight: bold;">
+                                    <tr>
+                                        <td>Incoterms</td>
+                                        <td>DN ref</td>
+                                        <td>DN date</td>
+                                        <td>Mode</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span t-field="o.sale_incoterm_id.code"/></td>
+                                        <td><span t-field="o.ship_pl_reference"/></td>
+                                        <td><span t-esc="datetime.datetime.now().strftime('%Y-%m-%d')" t-options="{'widget': 'date'}" class="m-0"/></td>
+                                        <td><span t-field="o.delivery_mode_id.name"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-5 p-0">
+                        <div class="px-1" style="border: 1px solid #3db5fd">
+                            <!-- adresse de livraison + contacts liés -->
+                            <strong><u>Ship to:</u></strong>
+                            <span t-field="o.destination_partner_id" t-options='{"widget": "contact", "fields": ["address", "name", "phone","mobile"]}'/>
+                            <t t-foreach="o.destination_partner_id.child_ids" t-as="contact">
+                                <div t-if="contact.is_displayed_on_report">
+                                    <span t-field="contact.name"/>
+                                    <span class="mr-2">:</span>
+                                    <span t-field="contact.phone"/>
+                                    <t t-if="contact.phone and contact.mobile"><span class="mx-2">/</span></t>
+                                    <span t-field="contact.mobile"/>
+                                    <t t-if="(contact.mobile or contact.phone) and contact.email"><span class="mx-2">/</span></t>
+                                    <span t-field="contact.email"/>
+                                </div>
+                            </t>
+                            <t t-if="o.destination_note">
+                                <div>
+                                    <span t-field="o.destination_note"/>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2" style="border-right: 1px solid #3db5fd; border-left: 1px solid #3db5fd; border-bottom: 2px solid #d9dadb;">
+                    <table class="table table-sm w-100">
+                        <thead style="background-color: #3db5fd; color: white;">
+                            <tr>
+                                <th>Line/Rel</th>
+                                <th>Product ref</th>
+                                <th>Qty ordered</th>
+                                <th>Qty delivered</th>
+                                <th>HS Code</th>
+                                <th>Country of origin</th>
+                                <th>Net weight (kg)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="line_number" t-value="0"/>
+                            <tr t-foreach="o.move_lines" t-as="line">
+                                <t t-set="line_number" t-value="line_number + 1"/>
+                                <td><span t-esc="line_number"/></td>
+                                <td>
+                                    <span t-field="line.description_picking"/>
+                                    <div t-if="line.product_id.total_li_qty > 0">
+                                        <span t-field="line.product_id.hazardous_classification"/>
+                                    </div>
+                                </td>
+                                <td><span t-field="line.product_uom_qty"/></td>
+                                <td><span t-field="line.quantity_done"/></td>
+                                <td><span t-field="line.product_id.hs_code"/></td>
+                                <td><span t-field="line.origin_country_id.name"/></td>
+                                <td><span t-field="line.weight"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row pb-2" style="border-right: 1px solid #3db5fd; border-left: 1px solid #3db5fd">
+                    <table style="margin-left: 150px;">
+                        <tr>
+                            <td class="text-right pr-2">Incoterms: </td>
+                            <td>
+                                <span t-field="o.sale_incoterm_id.code"/>
+                                <span class="mx-3">-</span>
+                                <span t-field="o.incoterm_city"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-2">Mode: </td>
+                            <td>
+                                <span t-field="o.delivery_mode_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-2">Tracking: </td>
+                            <td><span t-field="o.carrier_tracking_ref"/></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-2">Packing details: </td>
+                            <td class="col-md-6">
+                                <span t-field="o.packing_details"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row" style="border: 1px solid #3db5fd">
+                    <div class="col-12 p-0" style="border-right: 1px solid #3db5fd">
+                        <div style="background-color: #3db5fd; color: white; padding: 5px 0 5px 50px; font-weight: bold;">
+                            REMARKS
+                        </div>
+                        <div class="pb-5">
+                            <span t-field="o.ship_pl_note"/>
+                        </div>
+                    </div>
+                    <!-- <div class="col-3 p-0">
+                        <table class="w-100">
+                            <div class="text-center" style="background-color: #595959; color: white; padding: 5px 10px 5px 0; font-weight: bold;">
+                                TOTAL NET WEIGHT (KG)
+                            </div>
+                            <div class="jumbotron d-flex text-center align-items-center mb-0">
+                                <div class="container">
+                                    <span class="" t-field="o.weight"/>
+                                </div>
+                            </div>
+                            <div class="text-center" style="background-color: #595959; color: white; padding: 5px 10px 5px 0; font-weight: bold;">
+                                TOTAL GROSS WEIGHT (KG)
+                            </div>
+                            <div class="jumbotron d-flex text-center align-items-center mb-0">
+                                <div class="container">
+                                    <span class="" t-field="o.shipping_weight"/>
+                                </div>
+                            </div>
+                        </table>
+                    </div> -->
+                </div>
+
+            </t>
+        </t>
+    </template>
+</odoo>

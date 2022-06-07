@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="action_report_lithium_per_package" model="ir.actions.report">
+        <field name="name">Lithium document</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sit_product_lithium_report.report_lithium_per_package</field>
+        <field name="report_file">sit_product_lithium_report.report_lithium_per_package</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

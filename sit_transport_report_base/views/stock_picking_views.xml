@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="after">
+                <group class="my-0 py-0">
+                    <field name="show_transport" widget="boolean_toggle"/>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='extra']" position="after">
+                <page string="Contacts" name="contact" attrs="{'invisible': [('show_transport','!=',True)]}">
+                    <group>
+                        <group string="Origin">
+                            <field name="departure_partner_id" widget="res_partner_many2one" context="{'show_address': 1}" options="{'always_reload': True}"/>
+                            <field name="departure_note" placeholder="Add an note about departure address that will be printed on the transport document"/>
+                            <field name="exporter_partner_id"/>
+                            <field name="exporter_note"/>
+                            <field name="origin_depot_id"/>
+                        </group>
+                        <group string="Destination">
+                            <field name="destination_partner_id" widget="res_partner_many2one" context="{'show_address': 1}" options="{'always_reload': True}"/>
+                            <field name="destination_note"/>
+                            <field name="importer_partner_id"/>
+                            <field name="importer_note"/>
+                            <field name="dest_depot_id"/>
+                        </group>
+                        <group string="Sales">
+                            <field name="customer_id"/>
+                            <field name="vendor_id"/>
+                        </group>
+                    </group>
+                </page>
+                <page string="Transport details" name="transport_details" attrs="{'invisible': [('show_transport','!=',True)]}">
+                    <field name="move_lines" options="{'no_open': True}">
+                        <tree create="false" delete="false" editable="top">
+                            <field name="company_id" invisible="1"/>
+                            <field name="name" invisible="1"/>
+                            <field name="state" invisible="1" readonly="0"/>
+                            <field name="show_operations" invisible="1" readonly="1"/>
+                            <field name="additional" invisible="1"/>
+                            <field name="is_locked" invisible="1"/>
+                            <field name="product_uom_category_id" invisible="1"/>
+                            <field name="product_id" readonly="1"/>
+                            <field name="description_picking" string="Description"/>
+                            <field name="is_initial_demand_editable" invisible="1"/>
+                            <field name="is_quantity_done_editable" invisible="1"/>
+                            <field name="product_uom_qty" string="Demand" attrs="{'column_invisible': [('parent.immediate_transfer', '=', True)], 'readonly': ['|', ('is_initial_demand_editable', '=', False), '&amp;', '&amp;', ('show_operations', '=', True), ('is_locked', '=', True), ('is_initial_demand_editable', '=', False)]}"/>
+                            <field name="product_qty" invisible="1" readonly="1"/>
+                            <field name="quantity_done" string="Done" attrs="{'readonly': [('is_quantity_done_editable', '=', False)], 'column_invisible':[('parent.state', '=', 'draft'), ('parent.immediate_transfer', '=', False)]}"/>
+                            <field name="product_uom" attrs="{'readonly': [('state', '!=', 'draft'), ('additional', '=', False)]}" options="{'no_open': True, 'no_create': True}" string="Unit of Measure" groups="uom.group_uom"/>
+                            <field name="hs_code"/>
+                            <field name="origin_country_id"/>
+                            <field name="price_unit"/>
+                            <field name="price_subtotal" widget="monetary"/>
+                        </tree>
+                    </field>
+                    <group class="oe_subtotal_footer oe_right my-0 py-0">
+                        <field name="amount_total" widget="monetary"/>
+                        <field name="currency_id"/>
+                    </group>
+                    <group name="group_packing_details" string="Packing details">
+                        <field name="packing_details" nolabel="1" placeholder="Packing details printed on the transport document"/>
+                        <button name="action_compute_packing_details" type="object" string="Compute packing details"
+                                confirm="If any packing details have been added manually below, this will replace them. Continue anyway ?"
+                                attrs="{'invisible': [('has_packages', '=', False)]}"/>
+                    </group>
+                    <group name="transport_note" string="Note">
+                        <field name="transport_note" nolabel="1" placeholder="Add an note that will be printed on the transport document"/>
+                    </group>
+                </page>
+            </xpath>
+            <field name="carrier_id" position="after">
+                <field name="transport_supplier_id"/>
+                <field name="delivery_mode_id" options="{'no_create': True}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_picking_form_incoterm" model="ir.ui.view">
+        <field name="name">stock.picking.form.view.incoterm</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="sit_stock_incoterm.view_picking_form" />
+        <field name="arch" type="xml">
+			<xpath expr="//field[@name='sale_incoterm_id']" position="after">
+				<field name="incoterm_city"/>
+			</xpath>
+        </field>
+    </record>
+
+</odoo>
