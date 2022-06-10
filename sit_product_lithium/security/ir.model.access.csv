@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_lithium_battery_user,lithium.battery.user,model_product_lithium_battery,base.group_user,1,0,0,0
+access_product_lithium_battery_manager,lithium.battery.manager,model_product_lithium_battery,stock.group_stock_manager,1,1,1,1
+access_product_lithium_quantity_user,lithium.quantity.user,model_product_lithium_quantity,base.group_user,1,0,0,0
+access_product_lithium_quantity_manager,lithium.quantity.manager,model_product_lithium_quantity,stock.group_stock_manager,1,1,1,1

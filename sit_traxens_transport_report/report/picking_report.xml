@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="action_report_ship_pi" model="ir.actions.report">
+        <field name="name">SHIP PI</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sit_traxens_transport_report.report_ship_pi</field>
+        <field name="report_file">sit_traxens_transport_report.report_ship_pi</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="action_report_ship_pl" model="ir.actions.report">
+        <field name="name">SHIP PL</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sit_traxens_transport_report.report_ship_pl</field>
+        <field name="report_file">sit_traxens_transport_report.report_ship_pl</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

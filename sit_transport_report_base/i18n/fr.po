@@ -1,0 +1,347 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sit_transport_report_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-23 10:32+0000\n"
+"PO-Revision-Date: 2022-02-23 10:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,help:sit_transport_report_base.field_stock_picking__transport_note
+msgid "Add a note that will be displayed on the transport document"
+msgstr "Ajouter une note qui figurera sur le document de transport."
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid ""
+"Add an note about departure address that will be printed on the transport "
+"document"
+msgstr ""
+"Ajouter une note concernant l'adresse de départ qui sera imprimée sur le "
+"document de transport."
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Add an note that will be printed on the transport document"
+msgstr "Ajouter une note à imprimer sur les documents de transport."
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__amount_total
+msgid "Amount total"
+msgstr "Montant total"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Compute packing details"
+msgstr "Générer les détails de colisage"
+
+#. module: sit_transport_report_base
+#: model:ir.model,name:sit_transport_report_base.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier__transport_supplier_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__transport_supplier_id
+msgid "Contact Transporteur"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Contacts"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__picking_currency_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__customer_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: sit_transport_report_base
+#: model:ir.model,name:sit_transport_report_base.model_delivery_carrier_mode
+msgid "Delivery Carrier Mode"
+msgstr "Mode d'expédition"
+
+#. module: sit_transport_report_base
+#: model:ir.actions.act_window,name:sit_transport_report_base.action_delivery_carrier_mode_list
+#: model:ir.ui.menu,name:sit_transport_report_base.menu_action_delivery_carrier_mode_list
+msgid "Delivery carrier mode"
+msgstr "Modes d'expédition"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__delivery_mode_id
+msgid "Delivery mode"
+msgstr "Mode d'expédition"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Demand"
+msgstr "Demande"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__departure_partner_id
+msgid "Departure address"
+msgstr "Adresse de départ"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__origin_depot_id
+msgid "Departure location"
+msgstr "Dépôt de départ"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__departure_note
+msgid "Departure notes"
+msgstr "Notes départ"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Description"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Destination"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__destination_partner_id
+msgid "Destination address"
+msgstr "Adresse de livraison"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__dest_depot_id
+msgid "Destination location"
+msgstr "Dépôt de destination"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__destination_note
+msgid "Destination notes"
+msgstr "Notes destination"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier__display_name
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__display_name
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_template__display_name
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_partner__display_name
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__display_name
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Done"
+msgstr "Fait"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__exporter_note
+msgid "Exporter notes"
+msgstr "Notes contact exportateur"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_partner__exporter_partner_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_users__exporter_partner_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__exporter_partner_id
+msgid "Exporter partner"
+msgstr "Contact exportateur"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__hs_code
+msgid "HS code"
+msgstr "Code HS"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier__id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_template__id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_partner__id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid ""
+"If any packing details have been added manually below, this will replace "
+"them. Continue anyway ?"
+msgstr ""
+"Si du texte a été saisi manuellement dans les détails de colisage, il sera "
+"remplacé par cette opération. Poursuivre malgré tout?"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__importer_note
+msgid "Importer notes"
+msgstr "Notes contact importateur"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_partner__importer_partner_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_users__importer_partner_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__importer_partner_id
+msgid "Importer partner"
+msgstr "Contact importateur"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__incoterm_city
+msgid "Incoterm City"
+msgstr "Incoterm Ville/Port"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier____last_update
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode____last_update
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_template____last_update
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_partner____last_update
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move____last_update
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_delivery_carrier_mode__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Note"
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Origin"
+msgstr "Origine"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_product__origin_country_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_template__origin_country_id
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__origin_country_id
+msgid "Origin country"
+msgstr "Pays d'origine"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__packing_details
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Packing details"
+msgstr "Détails de colisage"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Packing details printed on the transport document"
+msgstr "Détails de colisage à imprimer sur les documents de transport."
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__price_unit
+msgid "Price unit"
+msgstr "Prix unitaire"
+
+#. module: sit_transport_report_base
+#: model:ir.model,name:sit_transport_report_base.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Sales"
+msgstr "Vente"
+
+#. module: sit_transport_report_base
+#: model:ir.model,name:sit_transport_report_base.model_delivery_carrier
+msgid "Shipping Methods"
+msgstr "Méthodes d'expédition"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__show_transport
+msgid "Show transport fields"
+msgstr "Afficher champs transport"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,help:sit_transport_report_base.field_stock_move__hs_code
+msgid ""
+"Standardized code for international shipping and goods declaration. At the "
+"moment, only used for the FedEx shipping provider."
+msgstr ""
+
+#. module: sit_transport_report_base
+#: model:ir.model,name:sit_transport_report_base.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_move__price_subtotal
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#. module: sit_transport_report_base
+#: model:ir.model,name:sit_transport_report_base.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Transport details"
+msgstr "Transport"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__transport_note
+msgid "Transport note"
+msgstr "Notes transport"
+
+#. module: sit_transport_report_base
+#: model_terms:ir.ui.view,arch_db:sit_transport_report_base.view_picking_form
+msgid "Unit of Measure"
+msgstr "UdM"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_product__value_for_customs
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_product_template__value_for_customs
+msgid "Value for customs"
+msgstr "Valeur pour douane"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_stock_picking__vendor_id
+msgid "Vendor"
+msgstr "Vendeur"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,field_description:sit_transport_report_base.field_res_partner_category__is_contact_displayed
+msgid "Display contact on transport document"
+msgstr "Afficher contact sur document de transport"
+
+#. module: sit_transport_report_base
+#: model:ir.model.fields,help:sit_transport_report_base.field_res_partner_category__is_contact_displayed
+msgid "Display or not the delivery contact on SHIP_PI and SHIP_PL"
+msgstr "Pour les contacts d'une adresse de livraison, détermine si le contact doit être affiché dans les documents de transport, SHIP_PI et SHIP_PL"

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_lithium_per_package">
+    <t t-call="web.html_container">
+        <t t-set="data_report_margin_top" t-value="24"/>
+        <t t-set="data_report_header_spacing" t-value="18"/>
+        <!-- <t t-set="data_report_dpi" t-value="110"/> -->
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.internal_layout">
+                <t t-foreach="o.package_ids" t-as="package">
+                    <div class="page" style="page-break-after: always;">
+                        <div class="row">
+                            <div class="col-2 text-center">
+                                <p style="text-decoration: underline; font-size:2.5em;"><strong>CNEE:</strong></p>
+                            </div>
+                            <div class="col-10 text-left">
+                                <span style="line-height: 1.0; font-size:2.0em;" t-field="o.destination_partner_id" t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+                                <span style="font-size:1.5em;">
+                                    <t t-foreach="o.destination_partner_id.child_ids" t-as="contact">
+                                        <div>
+                                            <span t-field="contact.name"/>
+                                            <span class="mr-2">:</span>
+                                            <span t-field="contact.phone"/>
+                                            <t t-if="contact.phone and contact.mobile"><span class="mx-1">/</span></t>
+                                            <span t-field="contact.mobile"/>
+                                            <t t-if="(contact.mobile or contact.phone) and contact.email"><span class="mx-1">/</span></t>
+                                            <span t-field="contact.email"/>
+                                        </div>
+                                    </t>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row my-5">
+                            <div class="col-2 text-center">
+                                <p style="text-decoration: underline; font-size:2.5em;"><strong>SHPR:</strong></p>
+                            </div>
+                            <div class="col-10 text-left">
+                                <span style="line-height: 1.0; font-size:2.0em;" t-field="o.departure_partner_id" t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}'/>
+                                <span style="font-size:1.5em;">
+                                    <t t-foreach="o.departure_partner_id.child_ids" t-as="contact">
+                                        <div>
+                                            <span t-field="contact.name"/>
+                                            <span class="mr-2">:</span>
+                                            <span t-field="contact.phone"/>
+                                            <t t-if="contact.phone and contact.mobile"><span class="mx-1">/</span></t>
+                                            <span t-field="contact.mobile"/>
+                                            <t t-if="(contact.mobile or contact.phone) and contact.email"><span class="mx-1">/</span></t>
+                                            <span t-field="contact.email"/>
+                                        </div>
+                                    </t>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row pt-3">
+                            <div class="col text-center">
+                                <p class="" style="line-height: 1.1; font-size:2.5em;"><strong>UN3091<br/>
+                                LITHIUM METAL BATTERIES<br/>
+                                CONTAINED IN EQUIPMENT</strong></p>
+                                <p style="font-size:2.5em;"><strong>NET QTY: <span t-field="package.total_lithium_weight"/> kg</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

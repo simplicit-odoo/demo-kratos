@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_withcarrier_out_form" model="ir.ui.view">
+        <field name="name">delivery.stock.picking_withcarrier.form.view2</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+        <field name="arch" type="xml">
+            <field name="carrier_tracking_ref" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="view_picking_form_tracking" model="ir.ui.view">
+        <field name="name">stock.picking.form.view.tracking</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field name="arch" type="xml">
+            <button name="action_see_packages" position="after">
+                <button string="Traceability" type="object"
+                    name="action_view_serial_number_moves"
+                    class="oe_stat_button" icon="fa-list"
+                    attrs="{'invisible': [('has_tracking', '=', False)]}"/>
+            </button>
+        </field>
+    </record>
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">stock.picking.form.view.transport.document</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="sit_transport_report_base.view_picking_form" />
+        <field name="arch" type="xml">
+            <group name="group_packing_details" position="before">
+                <group class="my-0 py-0" string="Document Reference" >
+                    <field name="ship_pi_reference" attrs="{'readonly': [('picking_type_code', '!=', 'incoming')]}"/>
+                    <field name="ship_pl_reference" attrs="{'readonly': [('picking_type_code', '!=', 'incoming')]}"/>
+                </group>
+            </group>
+            <group name='transport_note' position="replace">
+                <group>
+                    <group string="Note on SHIP PI">
+                        <field name="ship_pi_note" nolabel="1" placeholder="Add an note that will be printed on the transport document"/>
+                    </group>
+                    <group string="Note on SHIP PL">
+                        <field name="ship_pl_note" nolabel="1" placeholder="Add an note that will be printed on the transport document"/>
+                    </group>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>
