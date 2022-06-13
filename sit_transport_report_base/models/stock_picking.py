@@ -46,7 +46,7 @@ class StockPicking(models.Model):
     def _get_partner_warehouse(self, location):
         if not location:
             return False
-        warehouse = location.get_warehouse()
+        warehouse = location.warehouse_id
         if not warehouse:
             return False
         return warehouse.partner_id.id
